@@ -58,8 +58,8 @@ class ViewController: UIViewController {
             self.displayNumber += self.displayNumber.isEmpty ? "0." : "."
             self.numberOutputLabel.text = self.displayNumber
         }
-        
     }
+    
     @IBAction func tapDivideButton(_ sender: UIButton) {
         self.operation(.Divide)
     }
@@ -81,8 +81,8 @@ class ViewController: UIViewController {
         if self.currentOperation != .unknown {
             if !self.displayNumber.isEmpty{
                 self.secondOperand = self.displayNumber
+                // 결과값 출력해야하기 때문
                 self.displayNumber = ""
-                
                 // firstOperand,secondOperand 문자열을 실수형으로
                 guard let firstOperand = Double(self.firstOperand) else {
                     return
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
                 guard let secondOperand = Double(self.secondOperand) else {
                     return
                 }
-                
+                // 첫번째 피연산자와 두번째 피연산자 연산
                 switch self.currentOperation {
                 case .Add:
                     self.result = "\(firstOperand + secondOperand)"
@@ -103,21 +103,22 @@ class ViewController: UIViewController {
                 default:
                     break
                 }
-                // .0 인 경우(1로 나눴을때 나머지 0) - int형으로 출력하게
+                // ~.0 인 경우(1로 나눴을때 나머지 0) - int형으로 출력하게
                 if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0{
                     self.result = "\(Int(result))"
                 }
                 // 다음 연산을 위해 firstOperand에 결과값을 대입 -> 누적 연산 가능하게끔
                 self.firstOperand = self.result
+                // 결과값 출력
                 self.numberOutputLabel.text = self.result
             }
             self.currentOperation = operation
         }else{
             self.firstOperand = self.displayNumber
             self.currentOperation = operation
+            // 새로운 숫자를 받아야하기때문
             self.displayNumber = ""
         }
-        
     }
 }
 
