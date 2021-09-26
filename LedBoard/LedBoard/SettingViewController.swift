@@ -7,11 +7,14 @@
 
 import UIKit
 
+
 protocol LEDBoardSettingDelegate : AnyObject {
     func changedSetting(text: String?, textColor:UIColor, backgroundColor:UIColor)
 }
 
 class SettingViewController: UIViewController {
+
+
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
