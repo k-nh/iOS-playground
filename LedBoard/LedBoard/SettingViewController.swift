@@ -23,7 +23,6 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     
-    
     weak var delegate: LEDBoardSettingDelegate?
     var textColor : UIColor = .yellow
     var backgroundColor : UIColor = .black
@@ -45,7 +44,6 @@ class SettingViewController: UIViewController {
     }
 
     @IBAction func tapTextColorButton(_ sender: UIButton) {
-        // 어떤 버튼이 눌렸는지 sender 파라미터로 알수있음
         if sender == self.yellowButton {
             self.changeTextColor(color: .yellow)
             self.textColor = .yellow
@@ -56,7 +54,6 @@ class SettingViewController: UIViewController {
             self.changeTextColor(color: .green)
             self.textColor = .green
         }
-        
     }
     
     @IBAction func tapBackgroundColorButton(_ sender: UIButton) {
