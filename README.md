@@ -19,3 +19,12 @@ iOS study 👩‍💻
 4. [계산기 프로젝트](https://yesiamnahee.tistory.com/116)
 
 ![Simulator Screen Recording - iPhone 11 - 2021-09-17 at 14 34 43](https://user-images.githubusercontent.com/53509789/133731244-e6e90aa6-ab08-425d-9b3a-1e9476d536ba.gif)
+
+5. [spotify 스타일 로그인 프로젝트](https://yesiamnahee.tistory.com/117)
+- firebase Auth 이용
+
+![20210928_2021_09_28_14_13_45](https://user-images.githubusercontent.com/53509789/135060521-e6419a06-9185-45fa-bfe3-a805aea1c943.gif)
+
+6. 신용카드 추천 프로젝트
+
+![Simulator Screen Recording - iPhone 11 - 2021-09-28 at 18 31 32](https://user-images.githubusercontent.com/53509789/135062420-8d227241-0664-4b75-b3f4-37fc9dd06176.gif)
