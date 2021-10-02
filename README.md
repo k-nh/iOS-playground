@@ -48,7 +48,10 @@ iOS study 👩‍💻
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/CreditCardRecommendList)
 
 6. [실시간 공지사항 프로젝트](https://yesiamnahee.tistory.com/124?category=886482)
-- Firebase Realtime Database, Firestore Database 이용
+- Firebase remote config, A/B testing 이용
+
+![Simulator Screen Shot - iPhone 11 - 2021-10-01 at 13 24 51](https://user-images.githubusercontent.com/53509789/135714244-221e94f6-b27e-465a-a18c-1e5688b3ede3.png) ![Simulator Screen Shot - iPhone 11 - 2021-10-01 at 13 25 03](https://user-images.githubusercontent.com/53509789/135714247-d90874b2-f5e9-4ea9-a002-28e9a2623c93.png)
+
 
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/Notice)
 
@@ -56,7 +59,7 @@ iOS study 👩‍💻
 7. [날씨 프로젝트](https://yesiamnahee.tistory.com/127)
 - openweather 날씨 API 사용 (URLSession - Http통신)
 
-![Simulator Screen Recording - iPhone 11 - 2021-09-28 at 18 31 32](https://user-images.githubusercontent.com/53509789/135062420-8d227241-0664-4b75-b3f4-37fc9dd06176.gif)
+![Simulator Screen Recording - iPhone 11 - 2021-10-02 at 15 48 16](https://user-images.githubusercontent.com/53509789/135713576-3215b4a2-699c-4cbe-b84a-9c137cb2889d.gif)
 
 
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/Weather)
@@ -64,7 +67,7 @@ iOS study 👩‍💻
 
 8. [코로나19 현황 프로젝트](https://yesiamnahee.tistory.com/128)
 - corona-19-API 사용 (Alamofire - Http통신)
-![Simulator Screen Recording - iPhone 11 - 2021-10-02 at 15 48 16](https://user-images.githubusercontent.com/53509789/135713576-3215b4a2-699c-4cbe-b84a-9c137cb2889d.gif)
+
 ![무제](https://user-images.githubusercontent.com/53509789/135713595-7eef5e09-7d30-4130-bd4f-fca64c1d2e64.gif)
 
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/Covid19)
