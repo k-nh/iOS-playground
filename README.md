@@ -33,7 +33,7 @@ iOS study 👩‍💻
 
 
 5. [spotify 스타일 로그인 프로젝트](https://yesiamnahee.tistory.com/117)
-- Firebase Auth 이용
+- Firebase Auth 이용 이메일/비밀번호 로그인, 구글 로그인, 애플 로그인(추후 업로드)
 
 ![20210928_2021_09_28_14_13_45](https://user-images.githubusercontent.com/53509789/135060521-e6419a06-9185-45fa-bfe3-a805aea1c943.gif)
 
