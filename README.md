@@ -33,7 +33,7 @@ iOS study 👩‍💻
 
 
 5. [spotify 스타일 로그인 프로젝트](https://yesiamnahee.tistory.com/117)
-- Firebase Auth 이용
+- Firebase Auth 이용 이메일/비밀번호 로그인, 구글 로그인, 애플 로그인(추후 업로드)
 
 ![20210928_2021_09_28_14_13_45](https://user-images.githubusercontent.com/53509789/135060521-e6419a06-9185-45fa-bfe3-a805aea1c943.gif)
 
@@ -49,6 +49,9 @@ iOS study 👩‍💻
 
 6. [실시간 공지사항 프로젝트](https://yesiamnahee.tistory.com/124?category=886482)
 - Firebase remote config, A/B testing 이용
+
+![Simulator Screen Shot - iPhone 11 - 2021-10-02 at 20 46 18](https://user-images.githubusercontent.com/53509789/135714767-d26d7433-9827-43c2-b36a-0ce0da4b3681.png) ![image](https://user-images.githubusercontent.com/53509789/135714771-cc16c0c5-231f-487c-9f94-bf922c53a2ca.png)
+
 
 ![Simulator Screen Shot - iPhone 11 - 2021-10-01 at 13 24 51](https://user-images.githubusercontent.com/53509789/135714244-221e94f6-b27e-465a-a18c-1e5688b3ede3.png) ![Simulator Screen Shot - iPhone 11 - 2021-10-01 at 13 25 03](https://user-images.githubusercontent.com/53509789/135714247-d90874b2-f5e9-4ea9-a002-28e9a2623c93.png)
 
@@ -68,6 +71,6 @@ iOS study 👩‍💻
 8. [코로나19 현황 프로젝트](https://yesiamnahee.tistory.com/128)
 - corona-19-API 사용 (Alamofire - Http통신)
 
-![무제](https://user-images.githubusercontent.com/53509789/135713595-7eef5e09-7d30-4130-bd4f-fca64c1d2e64.gif)
+![무제](https://user-images.githubusercontent.com/53509789/135713595-7eef5e09-7d30-4130-bd4f-fca64c1d2e64.gif)
 
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/Covid19)
