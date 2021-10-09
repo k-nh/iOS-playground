@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD26CCEF27114E6F00B674B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26CCEE27114E6F00B674B7 /* ContentView.swift */; };
+		FD26CCF12711621600B674B7 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26CCF02711621600B674B7 /* ContentDetailView.swift */; };
 		FD964249270D879800D3E550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD964248270D879800D3E550 /* AppDelegate.swift */; };
 		FD96424B270D879800D3E550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96424A270D879800D3E550 /* SceneDelegate.swift */; };
 		FD964252270D879900D3E550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD964251270D879900D3E550 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD26CCEE27114E6F00B674B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD26CCF02711621600B674B7 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		FD964245270D879800D3E550 /* MovieRecommendProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieRecommendProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD964248270D879800D3E550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD96424A270D879800D3E550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				FD964261270D8C0500D3E550 /* Content.plist */,
 				FD964263270D8C3600D3E550 /* Content.swift */,
 				FD964267270D909800D3E550 /* ContentCollectionViewCell.swift */,
+				FD26CCEE27114E6F00B674B7 /* ContentView.swift */,
+				FD26CCF02711621600B674B7 /* ContentDetailView.swift */,
 			);
 			path = MovieRecommendProject;
 			sourceTree = "<group>";
@@ -164,11 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD964249270D879800D3E550 /* AppDelegate.swift in Sources */,
+				FD26CCF12711621600B674B7 /* ContentDetailView.swift in Sources */,
 				FD96426A270D928D00D3E550 /* ContentCollectionViewHeader.swift in Sources */,
 				FD96424B270D879800D3E550 /* SceneDelegate.swift in Sources */,
 				FD96426C270EB94100D3E550 /* ContentCollectionViewRankCell.swift in Sources */,
 				FD96425D270D880100D3E550 /* HomeViewController.swift in Sources */,
 				FD96426E270EBE7600D3E550 /* ContentCollectionViewMainCell.swift in Sources */,
+				FD26CCEF27114E6F00B674B7 /* ContentView.swift in Sources */,
 				FD964264270D8C3600D3E550 /* Content.swift in Sources */,
 				FD964268270D909800D3E550 /* ContentCollectionViewCell.swift in Sources */,
 				FD964270270EC92200D3E550 /* UIButton.swift in Sources */,

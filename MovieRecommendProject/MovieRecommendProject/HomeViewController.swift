@@ -67,6 +67,7 @@ class HomeViewController: UICollectionViewController {
         
     }
     
+    // 기본 화면 섹션 레이아웃 설정
     private func createBasicTypeSection() -> NSCollectionLayoutSection {
         //item
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
@@ -86,7 +87,7 @@ class HomeViewController: UICollectionViewController {
         return section
     }
     
-    // 큰화면 섹션 레이아웃 설정
+    // 큰 화면 섹션 레이아웃 설정
     private func createLargeTypeSection() -> NSCollectionLayoutSection{
         //item - basic과 동일
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
@@ -117,10 +118,10 @@ class HomeViewController: UICollectionViewController {
         //section
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        
         let sectionHeader = self.createSectionHeader()
         section.boundarySupplementaryItems = [sectionHeader]
         section.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+        
         return section
     }
     
@@ -193,7 +194,6 @@ extension HomeViewController{
         }
     }
     
-    
     // section 개수 설정
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return contents.count
@@ -201,29 +201,32 @@ extension HomeViewController{
     
     // cell 선택
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sectionName = contents[indexPath.section].sectionName
-        print("TEST:\(sectionName)섹션의 \(indexPath.row+1)번째 컨텐츠")
+        //detailView로
+        let isFirstSection = indexPath.section == 0
+        let selectedItem = isFirstSection ? mainItem
+            : contents[indexPath.section].contentItem[indexPath.row]
+        let contentDetailView = ContentDetailView(item: selectedItem)
+        let hostingVC = UIHostingController(rootView: contentDetailView)
+        self.show(hostingVC, sender: nil)
     }
-
-    
 }
 
 // swiftUI를 활용한 미리보기
 struct HomeViewController_Previews: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
+        HomeViewControllerRespresentable().edgesIgnoringSafeArea(.all)
     }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let layout = UICollectionViewLayout()
-            let homeViewController = HomeViewController(collectionViewLayout: layout)
-            return UINavigationController(rootViewController: homeViewController)
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-        
-        typealias UIViewControllerType = UIViewController
-    }
-    
 }
+
+struct HomeViewControllerRespresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let layout = UICollectionViewLayout()
+        let homeViewController = HomeViewController(collectionViewLayout: layout)
+        return UINavigationController(rootViewController: homeViewController)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+    
+    typealias UIViewControllerType = UIViewController
+}
+
