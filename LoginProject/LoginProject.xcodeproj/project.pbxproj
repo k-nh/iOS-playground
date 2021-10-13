@@ -10,7 +10,6 @@
 		EA4216987323CB11F6AE8332 /* Pods_LoginProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D4D761A39A2C519C91830 /* Pods_LoginProject.framework */; };
 		FDC58AD126F82FEF0034619E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC58AD026F82FEF0034619E /* AppDelegate.swift */; };
 		FDC58AD326F82FEF0034619E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC58AD226F82FEF0034619E /* SceneDelegate.swift */; };
-		FDC58AD526F82FEF0034619E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC58AD426F82FEF0034619E /* ViewController.swift */; };
 		FDC58AD826F82FEF0034619E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC58AD626F82FEF0034619E /* Main.storyboard */; };
 		FDC58ADA26F82FEF0034619E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC58AD926F82FEF0034619E /* Assets.xcassets */; };
 		FDC58ADD26F82FEF0034619E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC58ADB26F82FEF0034619E /* LaunchScreen.storyboard */; };
@@ -24,10 +23,10 @@
 		7F1BD5E94F49DBF33A8E9010 /* Pods-LoginProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginProject.release.xcconfig"; path = "Target Support Files/Pods-LoginProject/Pods-LoginProject.release.xcconfig"; sourceTree = "<group>"; };
 		AE5D4D761A39A2C519C91830 /* Pods_LoginProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D91ECFD8ECFFD60547D7D1 /* Pods-LoginProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginProject.debug.xcconfig"; path = "Target Support Files/Pods-LoginProject/Pods-LoginProject.debug.xcconfig"; sourceTree = "<group>"; };
+		FDB698F4270FD737009BD5E7 /* LoginProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginProject.entitlements; sourceTree = "<group>"; };
 		FDC58ACD26F82FEF0034619E /* LoginProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC58AD026F82FEF0034619E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC58AD226F82FEF0034619E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDC58AD426F82FEF0034619E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDC58AD726F82FEF0034619E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDC58AD926F82FEF0034619E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC58ADC26F82FEF0034619E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,9 +87,9 @@
 		FDC58ACF26F82FEF0034619E /* LoginProject */ = {
 			isa = PBXGroup;
 			children = (
+				FDB698F4270FD737009BD5E7 /* LoginProject.entitlements */,
 				FDC58AD026F82FEF0034619E /* AppDelegate.swift */,
 				FDC58AD226F82FEF0034619E /* SceneDelegate.swift */,
-				FDC58AD426F82FEF0034619E /* ViewController.swift */,
 				FDC58AD626F82FEF0034619E /* Main.storyboard */,
 				FDC58AD926F82FEF0034619E /* Assets.xcassets */,
 				FDC58ADB26F82FEF0034619E /* LaunchScreen.storyboard */,
@@ -237,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC58AE726F830870034619E /* LoginViewController.swift in Sources */,
-				FDC58AD526F82FEF0034619E /* ViewController.swift in Sources */,
 				FDC58AD126F82FEF0034619E /* AppDelegate.swift in Sources */,
 				FDDBBBA226F86EBC00262D9B /* MainViewController.swift in Sources */,
 				FDC58AD326F82FEF0034619E /* SceneDelegate.swift in Sources */,
@@ -389,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginProject/LoginProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQ5T25W9V5;
 				INFOPLIST_FILE = LoginProject/Info.plist;
@@ -409,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginProject/LoginProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQ5T25W9V5;
 				INFOPLIST_FILE = LoginProject/Info.plist;

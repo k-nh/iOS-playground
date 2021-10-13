@@ -15,7 +15,6 @@ class EmailViewController:UIViewController{
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         nextButton.layer.cornerRadius = 30
         // 이메일 비번 입력 x -> 비활성화
@@ -30,13 +29,10 @@ class EmailViewController:UIViewController{
         //nav바 보이기
         navigationController?.navigationBar.isHidden = false
     }
-    
     @IBAction func tapNextButton(_ sender: UIButton) {
-        // firebase 이메일, 비번 인증
-        // 빈 값이라면 ""로 옵셔널 처리
+        // firebase 이메일, 비번 인증 / 빈 값이라면 ""로 옵셔널 처리
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        
         // 유저 create , [weak self] - 순환참조방지
         Auth.auth().createUser(withEmail: email, password: password){ [weak self] authResult, error in
             guard let self = self else {return}
@@ -54,7 +50,6 @@ class EmailViewController:UIViewController{
                 self.showMainViewController()
             }
         }
-        
     }
     
     private func showMainViewController(){
