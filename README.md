@@ -77,9 +77,7 @@ iOS study 👩‍💻
 #### 8. [알림 프로젝트](https://yesiamnahee.tistory.com/132)
 -  Local Notification 사용
 
-![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 46 37](https://user-images.githubusercontent.com/53509789/137122114-91d5d4cb-d909-42b1-bfff-e12aa38afa2e.png)![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 46 41](https://user-images.githubusercontent.com/53509789/137122830-1419fa68-7a4c-472c-bcd9-507359829142.png)![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 46 49](https://user-images.githubusercontent.com/53509789/137122117-39524db3-a602-43f1-a95b-37ede134d86d.png)
-
-![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 47 02](https://user-images.githubusercontent.com/53509789/137122119-13cba513-a82d-4bf2-aeff-a7e56ef56159.png)![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 47 13](https://user-images.githubusercontent.com/53509789/137122121-a3f3c040-7772-46f6-a6eb-38c9a9d50d0e.png)![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 47 23](https://user-images.githubusercontent.com/53509789/137122123-30220c43-31ab-437b-a63b-4cbd2c13a8fd.png)
+![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 47 02](https://user-images.githubusercontent.com/53509789/137122119-13cba513-a82d-4bf2-aeff-a7e56ef56159.png)![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 47 13](https://user-images.githubusercontent.com/53509789/137122121-a3f3c040-7772-46f6-a6eb-38c9a9d50d0e.png)
 
 ![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 51 44](https://user-images.githubusercontent.com/53509789/137122167-4ed2193c-5cf6-4f22-8d05-7464378164d4.png) ![Simulator Screen Shot - iPhone 11 - 2021-10-12 at 22 51 52](https://user-images.githubusercontent.com/53509789/137122163-5e9f8a1a-c34c-4556-9fd9-7f2a5fb3ffc7.png)
 
@@ -90,7 +88,7 @@ iOS study 👩‍💻
 #### 9. [FCM 이용 푸시 알림 프로젝트](https://yesiamnahee.tistory.com/133?category=886482)
 -  Remote Notification 사용
 
-![IMG_6049](https://user-images.githubusercontent.com/53509789/137121234-4ebdbbce-99c8-4694-91ba-b8b7bcc77aaf.PNG)![IMG_6048](https://user-images.githubusercontent.com/53509789/137121241-d974e546-df4b-4ed6-9e75-6858bb2888f2.PNG)![IMG_6052](https://user-images.githubusercontent.com/53509789/137123441-b3ae8258-07f5-4ef7-83d9-743eeeb6e60e.PNG)
+![IMG_6049](https://user-images.githubusercontent.com/53509789/137121234-4ebdbbce-99c8-4694-91ba-b8b7bcc77aaf.PNG)![IMG_6052](https://user-images.githubusercontent.com/53509789/137123441-b3ae8258-07f5-4ef7-83d9-743eeeb6e60e.PNG)
 
 ![IMG_6051](https://user-images.githubusercontent.com/53509789/137121229-dadb9b89-0523-4934-b483-758fa7b47ed7.jpg) ![IMG_6095](https://user-images.githubusercontent.com/53509789/137121226-98271a84-1908-481a-89af-919bbb2a2bfa.jpg)
 
