@@ -105,3 +105,19 @@ iOS study 👩‍💻
 
 [해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/MovieRecommendProject)
 
+
+#### 11. 자산 관리 프로젝트
+- SwiftUI 사용
+
+![Simulator Screen Recording - iPhone 11 - 2021-10-13 at 21 34 13](https://user-images.githubusercontent.com/53509789/137133528-f68e9be2-c05f-4b3e-94e3-4d9329eb19bb.gif)
+
+[해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/MyAssets)
+
+
+#### 12. 깃허브 프로젝트
+- RxSwift 사용
+
+![Simulator Screen Recording - iPhone 11 - 2021-10-14 at 00 10 19](https://user-images.githubusercontent.com/53509789/137161729-264c6f3b-024e-43c7-958b-07adb3f8bbf0.gif)
+
+[해당 프로젝트 소스코드 보기](https://github.com/k-nh/iOS-playground/tree/master/GitHubRepo)
+
