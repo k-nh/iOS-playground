@@ -15,25 +15,19 @@ struct AssetCardSectionView: View {
     var assetData: [AssetData] {
         return asset.data
     }
-    
     var body: some View {
         VStack {
             AssetSectionHeaderView(title: asset.type.title)
-            TabMenuView(
-                tabs: ["지난달 결제", "이번달 결제", "다음달 결제"],
-                selectedTab: $selectedTab,
-                updated: .constant(.nextMonth(amount: "10000"))
+            TabMenuView(tabs: ["지난달 결제", "이번달 결제", "다음달 결제"], selectedTab: $selectedTab, updated: .constant(.nextMonth(amount: "10,000"))
             )
             TabView(
                 selection: $selectedTab,
-                content: {
-                    ForEach(0...2,  id: \.self) { i in
+                content:  {
+                    ForEach(0...2, id: \.self) { i in
                         VStack {
-                            ForEach(asset.data) { data in
+                            ForEach(assetData){ data in
                                 HStack {
                                     Text(data.title)
-                                        .font(.title3)
-                                        .foregroundColor(.secondary)
                                     Spacer()
                                     Text(data.creditCardAmounts![i].amount)
                                         .font(.title2)
