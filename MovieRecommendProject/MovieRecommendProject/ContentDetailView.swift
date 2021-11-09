@@ -10,17 +10,24 @@ import SwiftUI
 struct ContentDetailView: View {
     @State var item: Item?
     var body: some View {
-        VStack{
-            if let item = item {
-                Image(uiImage: item.image)
-                    .aspectRatio(contentMode: .fit)
-                Text(item.description)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .padding()
-            } else {
-                Color.white
+        ZStack{
+            Color.black.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            ZStack(alignment: .bottom){
+                if let item = item {
+                    Image(uiImage: item.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200)
+                    Text(item.description)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .foregroundColor(.primary)
+                        .background(Color.primary.colorInvert().opacity(0.75))
+                } else {
+                    Color.white
+                }
             }
         }
     }

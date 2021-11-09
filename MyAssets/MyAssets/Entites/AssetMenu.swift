@@ -30,6 +30,7 @@ class AssetData: Identifiable, ObservableObject, Decodable {
         self.title = title
         self.amount = amount
         self.creditCardAmounts = creditCardAmounts
+
     }
 }
 
@@ -37,7 +38,7 @@ enum CreditCardAmounts: Identifiable, Decodable {
     case previousMonth(amount: String)
     case currentMonth(amount: String)
     case nextMonth(amount: String)
-    
+
     var id: Int  {
         switch self {
         case .previousMonth:
@@ -48,7 +49,6 @@ enum CreditCardAmounts: Identifiable, Decodable {
             return 2
         }
     }
-    
     var amount: String {
         switch self {
         case .previousMonth(let amount),
@@ -57,13 +57,11 @@ enum CreditCardAmounts: Identifiable, Decodable {
             return amount
         }
     }
-    
     enum CodingKeys: String, CodingKey {
         case previousMonth
         case currentMonth
         case nextMonth
     }
-    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -71,17 +69,14 @@ enum CreditCardAmounts: Identifiable, Decodable {
             self = .previousMonth(amount: value)
             return
         }
-        
         if let value = try? values.decode(String.self, forKey: .currentMonth) {
-            self = .previousMonth(amount: value)
+            self = .currentMonth(amount: value)
             return
         }
-        
         if let value = try? values.decode(String.self, forKey: .nextMonth) {
-            self = .previousMonth(amount: value)
+            self = .nextMonth(amount: value)
             return
         }
-        
         throw fatalError("ERROR: CreditCardAmount JSON Decoding")
     }
 }
@@ -117,10 +112,8 @@ enum AssetMenu: String, Identifiable, Decodable {
         case .cash:
             return "dollarsign.circle"
         case .realEstate:
-            return "house.fill"
-        }
+            return "house.fill" }
     }
-    
     var title: String {
         switch self {
         case .creditScore:
@@ -138,8 +131,7 @@ enum AssetMenu: String, Identifiable, Decodable {
         case .cash:
             return "현금영수증"
         case .realEstate:
-            return "부동산"
-        }
+            return "부동산"  }
     }
 }
 

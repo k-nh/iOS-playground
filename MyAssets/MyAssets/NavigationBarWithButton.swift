@@ -41,9 +41,7 @@ struct NavigationBarWithButton: ViewModifier {
                 UINavigationBar.appearance().compactAppearance = appearance
                 UINavigationBar.appearance().scrollEdgeAppearance = appearance
             }
-        
     }
-
 }
 
 extension View{

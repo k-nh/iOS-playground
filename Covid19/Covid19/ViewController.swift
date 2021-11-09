@@ -40,9 +40,7 @@ class ViewController: UIViewController {
         })
     }
     
-    func makeCovidOverviewList(
-        cityCovidOverview: CityCovidOverview
-    ) -> [CovidOverview] {
+    func makeCovidOverviewList(cityCovidOverview: CityCovidOverview) -> [CovidOverview] {
         return [
             cityCovidOverview.seoul,
             cityCovidOverview.busan,
@@ -97,8 +95,7 @@ class ViewController: UIViewController {
     }
 
     func fetchCovidOverview(
-        completionHandler: @escaping (Result<CityCovidOverview, Error>) -> Void
-    ){
+        completionHandler: @escaping (Result<CityCovidOverview, Error>) -> Void){
         let url = "https://api.corona-19.kr/korea/country/new/"
         let param = [
           "serviceKey": "MHym6cezIlKtFRN3Wr2n4ExpYUw5fiJaD"
@@ -115,13 +112,11 @@ class ViewController: UIViewController {
                     }catch{
                         completionHandler(.failure(error))
                     }
-                    
                 case let .failure(error):
                     completionHandler(.failure(error))
                 }
             })
     }
-
 }
 
 extension ViewController: ChartViewDelegate {

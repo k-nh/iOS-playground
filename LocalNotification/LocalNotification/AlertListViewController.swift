@@ -25,8 +25,6 @@ class AlertListViewController: UITableViewController{
         
         alerts = alertList()
     }
-    
-    
     @IBAction func addAlertButtonAction(_ sender: UIBarButtonItem) {
         //AddAlertViewController로 이동
         guard let addAlertViewController = storyboard?.instantiateViewController(identifier: "AddAlertViewController") as? AddAlertViewController else { return }
@@ -37,8 +35,7 @@ class AlertListViewController: UITableViewController{
             alertList.append(newAlert)
             alertList.sort {$0.date < $1.date}
             self.alerts = alertList
-            // userdefaults에 다시 저장
-            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")             // userdefaults에 다시 저장
             self.userNotificationCenter.addNotificationRequest(by: newAlert)
             self.tableView.reloadData()
         }
@@ -60,11 +57,9 @@ extension AlertListViewController{
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        // 첫번째 섹션
-        case 0:
+        case 0: // 첫번째 섹션
             return "💦 물 마실 시간"
-        // 다른 섹션
-        default:
+        default: // 다른 섹션
             return nil
         }
     }
@@ -78,15 +73,12 @@ extension AlertListViewController{
         
         return cell
     }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
@@ -96,8 +88,8 @@ extension AlertListViewController{
             userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[indexPath.row].id])
             self.tableView.reloadData()
             return
-        default:
-            break
+        default: break
         }
     }
 }
+

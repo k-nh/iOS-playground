@@ -73,7 +73,6 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
         plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         
-        
         infoButton.setTitle("정보", for: .normal)
         infoButton.setImage(UIImage(systemName: "plus"), for: .normal)
         infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
@@ -111,8 +110,7 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         [tvButton, movieButton, categoryButton].forEach {
             menuStackView.addArrangedSubview($0)
             $0.setTitleColor(.white, for: .normal)
-            // shadow color는 cgcolor를 받기 때문에 마지막에 cgcolor 꼭 붙여야함
-            $0.layer.shadowColor = UIColor.black.cgColor
+            $0.layer.shadowColor = UIColor.black.cgColor // shadow color는 cgcolor를 받기 때문에 마지막에 cgcolor 꼭 붙여야함
             $0.layer.shadowOpacity = 1
             $0.layer.shadowRadius = 3
         }
@@ -120,12 +118,10 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         tvButton.setTitle("TV 프로그램", for: .normal)
         movieButton.setTitle("영화", for: .normal)
         categoryButton.setTitle("카테고리 ▾", for: .normal)
-        
         tvButton.addTarget(self, action: #selector(tvButtonTapped), for: .touchUpInside)
         movieButton.addTarget(self, action: #selector(movieButtonTapped), for: .touchUpInside)
         categoryButton.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
 
-        
         menuStackView.snp.makeConstraints {
             $0.top.equalTo(baseStackView)
             $0.leading.trailing.trailing.equalToSuperview().inset(30)
@@ -136,7 +132,6 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
     @objc func tvButtonTapped(sender:UIButton!){
         print("TEST: TV Button Tapped")
     }
-    
     @objc func movieButtonTapped(sender:UIButton!){
         print("TEST: movie Button Tapped")
     }
