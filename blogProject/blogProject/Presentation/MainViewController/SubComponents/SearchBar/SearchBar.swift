@@ -8,23 +8,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import SnapKit
 
 final class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
-    
     let searchButton = UIButton()
-    
-    // search button 버튼 탭 이벤트
-    let searchButtonTapped = PublishRelay<Void>()
-    
-    // searh bar 외부로 내보낼 이벤트 - 텍스트
-    var shoudLoadResult = Observable<String>.of("")
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        bind()
         attribute()
         setupLayout()
         
@@ -34,10 +25,11 @@ final class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-private extension SearchBar {
-    func bind() {
+    func bind(_ viewModel: SearchBarViewModel) {
+        self.rx.text
+            .bind(to: viewModel.queryText)
+            .disposed(by: disposeBag)
+        
         // 서치바의 키보드 서치 버튼 탭 , 검색 버튼 탭 -> 두가지 옵저버블
         // 위의 두가지 옵저버블이 이벤트를 발생할때마다 해당 이벤트가 tappedSearchButton로 바인딩
         Observable
@@ -45,21 +37,20 @@ private extension SearchBar {
                 self.rx.searchButtonClicked.asObservable(),
                 searchButton.rx.tap.asObservable()
             )
-            .bind(to: searchButtonTapped)
+            .bind(to: viewModel.searchButtonTapped)
             .disposed(by: disposeBag)
         
         // end editing
-        searchButtonTapped
+        viewModel.searchButtonTapped
             .asSignal()
             .emit(to: self.rx.DidEndEditing)
             .disposed(by: disposeBag)
         
-        // 검색 버튼을 눌렀을때 최신의 텍스트가 빈값이나 중복값 없이 전달됨
-        self.shoudLoadResult = searchButtonTapped
-            .withLatestFrom(self.rx.text) { $1 ?? ""}
-            .filter { !$0.isEmpty }
-            .distinctUntilChanged()
     }
+    
+}
+
+private extension SearchBar {
     
     func attribute() {
         searchButton.setTitle("검색", for: .normal)
